@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <script>
+        function add(){
+            result.value = parseInt(num1.value) + parseInt(num2.value);
+        }
+        function subtract(){
+            result.value = parseInt(num1.value) - parseInt(num2.value);
+        }
+        function multiply(){
+            result.value = parseInt(num1.value) * parseInt(num2.value);
+        }
+        function divide(){
+            result.value = parseInt(num1.value) / parseInt(num2.value);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="num1"><br>
+    <input type="number" id="num2"><br>
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button><br>
+    <input type="number" id="result">
+</body>
+</html>
