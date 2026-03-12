@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Array Sorting Descending</title>
+</head>
+<body>
+    <div id="array"></div><button onclick="sort()">sort</button>
+    <script>
+        const arr = [2, 1, 3, 5, 0];
+        const a = document.getElementById("array");
+        a.innerHTML = arr
+        function sort(){
+            a.innerHTML = arr.sort().reverse();
+        }
+    </script>
+</body>
+</html>
