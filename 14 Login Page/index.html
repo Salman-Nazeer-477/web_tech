@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <center>
+        <label for="email">Email:</label><br>
+        <input type="text" name="email" id="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password"><br>
+        <button onclick="login()">Login</button>
+        <div id="message"></div>
+    </center>
+    <script>
+        function isValidEmail(email) {
+            const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+            return pattern.test(email)
+        }
+        function isValidPassword(password) {
+            const pattern = /^[A-Za-z\d@$!%*?&]{8,}$/
+            return pattern.test(email)
+        }
+        function login() {
+            let message = ""
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            if (!isValidEmail(email)) message += "Not a valid email.\n"
+            if (!isValidPassword(password)) message += "Not a valid password.\n"
+            document.getElementById("message").innerHTML = message
+        }
+    </script>
+</body>
+
+</html>
