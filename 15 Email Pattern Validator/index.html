@@ -17,8 +17,8 @@
         function validate() {
             let message = ""
             let email = document.getElementById("email").value
-            if (!isValidEmail(email)) message += "Not a valid email.\n"
-            else message += "Valid email.\n"
+            if (!isValidEmail(email)) message += "Not a valid email.<br>"
+            else message += "Valid email.<br>"
             document.getElementById("message").innerHTML = message
         }
     </script>
