@@ -1,19 +1,24 @@
 <html>
 <head>
-    <title>AJAX Demonstration</title>
-    <script>
-        function loadData(){
-            const xhttp = new XMLHttpRequest()
-            xhttp.onload = function(){
-                document.getElementById("demo").innerHTML = this.responseText
-            }
-            xhttp.open("GET", "data", true)
-            xhttp.send()
-        }
-    </script>
+  <title>Retrieve Date with AJAX</title>
 </head>
 <body>
-    <h1 id="demo">Hello World</h1>
-    <button onclick="loadData()">Load Data</button>
+  <h1>AJAX Date Retrieval</h1>
+  <button onclick="loadDate()">Load Date</button>
+  <div id="dateDisplay"></div>
+
+  <script>
+    function loadDate() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("dateDisplay").innerText = "Date from : " + this.responseText;
+        }
+      };
+      xhttp.open("GET", "date.txt",true);
+      xhttp.send();
+    }
+  </script>
 </body>
 </html>
+
